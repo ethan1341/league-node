@@ -1,0 +1,202 @@
+@import 'bootstrap.min.css';
+$serif:Playfair Display, serif;
+$sanserif: Open Sans, sans-serif;
+$shadow: 2px 3px #000;
+// Pass in Variable with multiple values to a multi argument mixin with $var...
+// Interpolation #{$side}
+				//Multi Use CSS
+body{
+padding-top: 50px;
+font-family: $sanserif;
+color:white;
+background-color:black;
+}
+
+h2,p{
+text-align:center;
+}
+input, .space{
+color:black;
+margin:2px 0;
+}
+li{
+font-family:$sanserif;
+}
+h2{
+font-family:$serif;
+}
+ul
+{
+list-style-type: none;
+padding: 0px !important;
+-moz-padding-start:0px !important;
+-webkit-padding-start:0px !important;
+-webkit-margin-before:0px !important;
+-webkit-margin-after:0px !important;
+}
+
+//Black Container Background
+.items-container{
+background-color: rgba(0,0,0,0.7);
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+margin-top:50px;
+padding-top:25px;
+overflow:auto;
+padding-bottom:10px;
+h2{
+margin-top:40px;
+}
+}
+
+
+				// CSS for items.ejs
+.show-item
+{
+height:120px;
+}
+
+
+//Shows Item Stats for show-item
+.item-mouseover 
+{
+position:relative;
+z-index:10;
+background-color:black;
+color:yellow;
+padding:20px;
+display:none;
+}
+// This is for specchamp.ejs
+.bg-drop
+{
+position: absolute;
+width: 100%;
+min-width: 1000px;
+height: 1080px;
+z-index: -10;
+background-color: black;
+background-position: top center;
+background-repeat: no-repeat;
+background-color: black;
+background-position: top center;
+background-repeat: no-repeat;
+}
+// Main text gives Description for champ
+.nameanddesc{
+font-size:22;
+font-family: 'Playfair Display', serif;
+color:white;
+margin-top:125px;
+margin-bottom:75px;
+text-shadow: 2px 3px #000;
+}
+				//CSS for user.ejs
+.match-container{
+margin-top:15px;
+margin-bottom:15px;
+border:1px solid black;
+}
+
+//Background for Each match *char specific
+.summ-background{
+position: absolute;
+left: 0px;
+top: 0px;
+height: 100%;
+width: 100%;
+background: #000;
+z-index: -1;
+opacity: 0.6;
+}
+
+				//CSS for index.eckground-items
+.background-items
+{
+background:url(http://fc02.deviantart.net/fs71/f/2014/074/a/4/league_of_legends_wallpaper_panel_art_by_wishlah-d7acxno.png)no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+//Background for Login
+.jumbo
+{
+background-image:url("http://static1.gamespot.com/uploads/original/280/2802776/2778520-9497800156-teamb.jpg");;
+height:100%;
+width:100%;
+}
+
+//Style for both REGISTER AND LOGIN
+.login
+{
+position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+ height:50%;
+background-color:rgba(0,0,0,.5);
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+border:2px solid white;
+}
+
+.inside{
+width:90%
+}
+// classes for both signup/register form
+.reg, .vert{
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+
+}
+//Container background below login
+.test1{
+margin-top:5%;
+background-color:rgba(0,0,0,.5);
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+border:1px solid white;
+}
+
+.scroll-div{
+position:absolute;
+bottom:5%;
+}
+.scroll-point{
+margin-top:-50px;
+ padding-top: 50px;
+padding-bottom:50px;
+
+}
+span.glyphicon-arrow-down{
+font-size:2em;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { }
+.item-mouseover{
+width:180%;
+} 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+.reg, .vert{
+top:40%;
+
+ }
+/*Center spec champ skills on mobile*/
+.center-mobile{
+display: block;
+margin-right: auto;
+margin-left: auto;
+float: none !important;
+}
+}

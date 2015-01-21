@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="userexp.js"></script>
+</head>
+<body class = 'background-items'>
+ <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container col-sm-8 col-sm-offset-2">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
+  <ul class="nav navbar-nav">
+	<li class='active'> <a href="#"><span class="sr-only">(current)</span>Home</a></li>
+        <li><a href="./items"> items</a></li>
+        <li><%if(isAuthenticated==true){%><a href="./user/<%=user.user.summoner%>">User</a><%}else{%>
+	<a href="/">User</a><%}%>
+	</li>
+	<li><a href="./champions">Champions</a></li>
+ </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class='jumbo'>
+<div class='col-xs-8 col-xs-offset-2 col-lg-4 col-lg-offset-4 text-center login'>
+<form action="." method="post" class= "vert center" id = "removelog"> 
+ 
+<div class='center'>
+
+<h2>Login</h2>  
+Username: &nbsp <input type="text" name="username" class="space inside" ><br>
+Password: &nbsp  &nbsp   <input type="text" class="inside" name="password"><br>
+Need an Account <a href = "#">Register Here</a><br>
+<input type="submit" class="space">
+</div><!--center-->
+</div><!--login-->
+
+<div class="scroll-div col-lg-2 col-lg-offset-5 col-xs-10 col-xs-offset-1 text-center">  <span class="glyphicon glyphicon-arrow-down center-block"><h2>Scroll Down</h2> </span>   </div>
+</div><!--jumbo-->
+<div class='container test1 '>
+<div class='col-lg-10 col-lg-offset-1 scroll-point'>
+<h2>Welcome Your League</h2>
+<p class='col-lg-10 col-lg-offset-1'> &nbsp &nbsp  &nbsp  &nbsp &nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+<ul class="col-lg-10 col-lg-offset-1"><h2 class='text-center'>How it was made?</h2>
+
+<li>  <br> &nbsp &nbsp  &nbsp  &nbsp &nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </li>
+
+<li><br> &nbsp &nbsp  &nbsp  &nbsp &nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </li>
+
+
+<li>  <br> &nbsp &nbsp  &nbsp  &nbsp &nbsp  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </li>
+
+<li><br> &nbsp &nbsp  &nbsp  &nbsp &nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </li>
+</ul>
+ 
+<ul class="col-lg-10 col-lg-offset-1"><h2>How to use made?</h2>
+
+<li>  <br> &nbsp &nbsp  &nbsp  &nbsp &nbsp  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </li>
+
+<li><br>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </li>
+
+
+<li>  <br> &nbsp &nbsp  &nbsp  &nbsp &nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </li>
+
+<li><br> &nbsp &nbsp  &nbsp  &nbsp &nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </li>
+
+
+
+</ul>
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+@import url(bootstrap.min.css);
+body {
+  padding-top: 50px;
+  font-family: Open Sans, sans-serif;
+  color: white;
+  background-color: black; }
+
+input, .space {
+  color: black;
+  margin: 2px 0; }
+
+li {
+  font-family: Open Sans, sans-serif; }
+
+h2 {
+  font-family: Playfair Display, serif; }
+
+ul {
+  list-style-type: none;
+  padding: 0px !important;
+  -moz-padding-start: 0px !important;
+  -webkit-padding-start: 0px !important;
+  -webkit-margin-before: 0px !important;
+  -webkit-margin-after: 0px !important; }
+
+.champ-75 {
+  height: 75px;
+  width: 75px; }
+
+.show-item {
+  height: 120px; }
+
+.item-mouseover {
+  position: relative;
+  z-index: 10;
+  background-color: black;
+  color: yellow;
+  padding: 20px;
+  display: none; }
+
+.bg-drop {
+  position: absolute;
+  width: 100%;
+  min-width: 1000px;
+  height: 1080px;
+  z-index: -10;
+  background-color: black;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: top center;
+  background-repeat: no-repeat; }
+
+.background-items {
+  background: url(http://fc02.deviantart.net/fs71/f/2014/074/a/4/league_of_legends_wallpaper_panel_art_by_wishlah-d7acxno.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.items-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  margin-top: 50px;
+  padding-top: 25px; }
+  .items-container h2 {
+    margin-top: 40px; }
+
+.nameanddesc {
+  font-size: 22;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  margin-top: 125px;
+  margin-bottom: 75px;
+  text-shadow: 2px 3px #000; }
+
+.match-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid black; }
+
+.summ-background {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  z-index: -1;
+  opacity: 0.6; }
+
+.jumbo {
+  background-image: url("http://static1.gamespot.com/uploads/original/280/2802776/2778520-9497800156-teamb.jpg");
+  height: 100%;
+  width: 100%; }
+
+.login {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  border: 2px solid white; }
+
+.reg, .vert {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.test1 {
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  border: 1px solid white; }
+
+.scroll-div {
+  position: absolute;
+  bottom: 5%; }
+
+.scroll-point {
+  margin-top: -50px;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .scroll-point h2, .scroll-point p {
+    text-align: center; }
+
+span.glyphicon-arrow-down {
+  font-size: 2em; }
+
+/* Portrait tablet to landscape and desktop */
+.item-mouseover {
+  width: 180%; }
+
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .reg, .vert {
+    top: 40%; }
+
+  .inside {
+    width: 90%; } }
+
+/*# sourceMappingURL=css.map */

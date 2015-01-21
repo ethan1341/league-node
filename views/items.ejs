@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body class = 'background-items' >
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container col-sm-8 col-sm-offset-2">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav">
+        <li> <a href="/">Home</a></li>
+        <li class="active"><a href="#"><span class="sr-only">(current)</span>items</a></li>
+        <li><%if(isAuthenticated==true){%><a href="./user/<%=user.user.summoner%>">User</a><%}else{%>
+        <a href="/">User</a><%}%>
+        </li>
+        <li><a href="./champions">Champions</a></li>
+ </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class='container col-lg-8 col-lg-offset-2 items-container'>
+<h2>Items</h2>
+<% for( var prop in resitemget.data){%>
+<div id = '<%=resitemget.data[prop].id%>' class= ' col-xs-6 col-sm-2  item-grid show-item'>
+<ul>
+<li><img class='center-block' src =http://ddragon.leagueoflegends.com/cdn/4.20.1/img/item/<%= resitemget.data[prop].image.full%>></li>
+</ul>
+<div class='text-center'><%=resitemget.data[prop].name%></div>
+<div class='item-mouseover col-lg-12'>
+<ul>
+
+<img src =http://ddragon.leagueoflegends.com/cdn/4.20.1/img/item/<%= resitemget.data[prop].image.full%>>
+<li><%=resitemget.data[prop].name%></li>
+<li><%=resitemget.data[prop].sanitizedDescription%></li>
+<li>Cost<%=resitemget.data[prop].gold.total%></li>
+</ul>
+</div>
+</div>
+<%}%>
+</div>
+</body>
+
+<script src="userexp.js"></script>
+</html>
+
