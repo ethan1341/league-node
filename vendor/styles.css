@@ -1,4 +1,16 @@
 @import url(bootstrap.min.css);
+.backgroundextend, .items-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  border: 1px solid white; }
+
+.modal {
+  color: black; }
+  .modal .modal-title {
+    font-family: Playfair Display, serif; }
+
 body {
   padding-top: 50px;
   font-family: Open Sans, sans-serif;
@@ -27,10 +39,6 @@ ul {
   -webkit-margin-after: 0px !important; }
 
 .items-container {
-  background-color: rgba(0, 0, 0, 0.7);
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
   margin-top: 50px;
   padding-top: 25px;
   overflow: auto;
@@ -75,6 +83,10 @@ ul {
   margin-bottom: 15px;
   border: 1px solid black; }
 
+.champ-75 {
+  height: 75px;
+  width: 75px; }
+
 .summ-background {
   position: absolute;
   left: 0px;
@@ -117,12 +129,7 @@ ul {
   transform: translateY(-50%); }
 
 .test1 {
-  margin-top: 5%;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  border: 1px solid white; }
+  margin-top: 5%; }
 
 .scroll-div {
   position: absolute;

@@ -13,7 +13,6 @@ var passportLocal = require('passport-local');
 var bcrypt = require('bcrypt');
 var connect = mongoose.connect('mongodb://localhost/userinfo', function(err) {})
 var db = mongoose.connection;
-var summoner;
 //App uses
 db.once('open', function() {
     console.log('db is open')
@@ -71,11 +70,11 @@ console.log(req.session.passport);
     });
 });
 app.post('/', passport.authenticate('user'), function(req,res){
+	console.log(req.user.summonername);
 	res.redirect('user/'+ req.user.summonername)
 });
 app.post('/register', function(req, res) {
     console.log(req.body.regname);
-    console.log('ethan');
     var newusername = req.body.username;
     var newuserpass = req.body.password;
     var newsummoner = req.body.summonername;
@@ -99,11 +98,13 @@ app.post('/register', function(req, res) {
             if (newuserinfo == null) {
 
                 newaccountinfo.save(function(err) {
-                    console.log(err);
+                    res.redirect('/#loginsuccess');
                 })
                 console.log('you registered');
             } else {
                 console.log(' this name exists');
+		
+                    res.redirect('/#logfail');
             }
         });
         console.log('complete');
@@ -119,10 +120,11 @@ app.get('/login', function(req, res) {
 app.post('/login', passport.authenticate('local'), function(req, res) {});
 //riot api userinfos
 app.get('/user/:name', function(req, res) {
- var username = req.params.name
+ var username = req.params.name;
+var useresc  = username.replace(/\s+/g, '');
     var options = {
         method: "GET",
-        url: "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + req.params.name,
+        url: "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + username,
         qs: {
             api_key: "2ee8e653-62c7-403a-baf1-8e7bc56d0848"
         },
@@ -131,13 +133,13 @@ app.get('/user/:name', function(req, res) {
         }
     }
     request(options, function(error, response, body) {
-        var usernameget = JSON.parse(body); //use this as the value of local
-        //res.locals = {resuserinfokey: usernameget}; //key goes in template
+ var usernameget = JSON.parse(body); //use this as the value of local
+ var useridurl = usernameget[useresc].id     
+ //res.locals = {resuserinfokey: usernameget}; //key goes in template
         //console.log(usernameget);
-        var userapi = usernameget[username].id;
         var option = {
             method: "GET",
-            url: "https://na.api.pvp.net/api/lol/na/v2.2/matchhistory/" + userapi + "?rankedQueues=RANKED_SOLO_5x5&beginIndex=0&endIndex=15&",
+            url: "https://na.api.pvp.net/api/lol/na/v2.2/matchhistory/" + useridurl  + "?rankedQueues=RANKED_SOLO_5x5&beginIndex=0&endIndex=5&",
             qs: {
                 api_key: "2ee8e653-62c7-403a-baf1-8e7bc56d0848"
             },

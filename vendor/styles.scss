@@ -2,9 +2,29 @@
 $serif:Playfair Display, serif;
 $sanserif: Open Sans, sans-serif;
 $shadow: 2px 3px #000;
+
+				// Extend Classes
+.backgroundextend
+{
+background-color:rgba(0,0,0,.5);
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+border:1px solid white;
+}
+//@include vertical-margin($top, $bottom, $tvalue, $b, $value){
+//
+//}
 // Pass in Variable with multiple values to a multi argument mixin with $var...
 // Interpolation #{$side}
 				//Multi Use CSS
+.modal
+{
+color:black;
+.modal-title{
+font-family: $serif;
+}
+}
 body{
 padding-top: 50px;
 font-family: $sanserif;
@@ -37,10 +57,7 @@ padding: 0px !important;
 
 //Black Container Background
 .items-container{
-background-color: rgba(0,0,0,0.7);
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;
+@extend .backgroundextend;
 margin-top:50px;
 padding-top:25px;
 overflow:auto;
@@ -98,7 +115,10 @@ margin-top:15px;
 margin-bottom:15px;
 border:1px solid black;
 }
-
+.champ-75{
+height:75px;
+width:75px;
+};
 //Background for Each match *char specific
 .summ-background{
 position: absolute;
@@ -157,11 +177,6 @@ transform: translateY(-50%);
 //Container background below login
 .test1{
 margin-top:5%;
-background-color:rgba(0,0,0,.5);
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;
-border:1px solid white;
 }
 
 .scroll-div{
