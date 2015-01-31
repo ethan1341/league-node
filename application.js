@@ -6,7 +6,6 @@ var ejs = require('ejs');
 var request = require('request');
 var passport = require('passport');
 var mongoose = require('mongoose');
-var passport = require('passport');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var passportLocal = require('passport-local');
@@ -38,7 +37,6 @@ var userSchema = mongoose.Schema({
 });
 var newuserinfo = mongoose.model('userinformation', userSchema);
 passport.use('user', new passportLocal.Strategy(function(username, password, done) {
-    console.log(username)
     newuserinfo.findOne({
         "username": username
     }, function(err, newuserinfo) {
@@ -63,14 +61,12 @@ passport.deserializeUser(function(username, done) {
     });
 });
 app.get('/', function(req, res) {
-console.log(req.session.passport);
     res.render('index.ejs', {
         isAuthenticated: req.isAuthenticated(),
         user: req.session.passport
     });
 });
 app.post('/', passport.authenticate('user'), function(req,res){
-	console.log(req.user.summonername);
 	res.redirect('user/'+ req.user.summonername)
 });
 app.post('/register', function(req, res) {
@@ -100,14 +96,11 @@ app.post('/register', function(req, res) {
                 newaccountinfo.save(function(err) {
                     res.redirect('/#loginsuccess');
                 })
-                console.log('you registered');
             } else {
-                console.log(' this name exists');
 		
                     res.redirect('/#logfail');
             }
         });
-        console.log('complete');
     }
 });
 //register and login

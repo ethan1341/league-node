@@ -5,6 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link href="../styles.css" rel="stylesheet">
+<script src = "../../userexp.js"></script>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
         <li> <a href="/">Home</a></li>
         <li><a href="../items"> items</a></li>
         <li><%if(isAuthenticated==true){%><a href="../user/<%=user.user.summoner%>"> User</a><%}else{%>
-        <a href="/">User</a> <%}%>
+        <a href="#promptlogin">User</a> <%}%>
         </li>
 
 	 <li><a href="../champions">Champions</a></li>
@@ -37,6 +38,9 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<div id="modalmessage" class="modal fade">
+
+</div>
 
 <div class= "bg-drop" style="background-image: url('http://cdn.leagueoflegends.com/game-info/1.1.9/images/champion/backdrop/bg-<%=resspecchampionget.name.toLowerCase()%>.jpg')">
 
