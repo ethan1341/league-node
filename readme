@@ -1,0 +1,16 @@
+Technologies:
+1. Node.JS
+2. Express.JS
+3. MongoDB
+4. Passport
+5. CSS
+6. Sass
+7. Mongoose
+8. HTML
+
+#Purpose
+I decided to learn these technologies, to bring in specific user information from the Riot API. The goal was to give the user a more personal experience. The data was statastics from his/her most recent games. I used the Riot  API to bring in and update content. 
+
+I chose the server framework Express because it is widely used. MongoDB was chosen because it was a new type database and native to Javascript. Passport was important to the creation of the site becuase of the session variable. It allowed me to persist user data across page views.    
+
+

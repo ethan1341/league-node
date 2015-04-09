@@ -1,0 +1,9 @@
+{
+  "lint": [
+      "!node_modules/**/*.js",
+          "**/*.js"
+            ],  
+              "func": [
+                  "test/func/**/*.js"
+                  ]
+}  
